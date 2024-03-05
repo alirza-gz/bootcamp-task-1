@@ -1,0 +1,182 @@
+/* RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLE */
+
+:root {
+  --color-number: #234894;
+  --bgcolor-number: #afcedd;
+  --color-body: #333333;
+  --color-heading: #000;
+  --color-white: #fff;
+  --color-btn: #219f95;
+  --color-btn-hover: #069489;
+  --avatar-size: 50px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--color-body);
+  line-height: 1.7;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.heading {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* SECTION */
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+  justify-content: center;
+  gap: 30px;
+}
+
+/* CARD */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  padding: 15px;
+  gap: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__intro {
+  color: var(--color-number);
+}
+
+.card__num {
+  background-color: var(--bgcolor-number);
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+.card__upload {
+  display: inline-block;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.card__img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.card__name {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.card__btn {
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-btn);
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+}
+
+.card__btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 2.3rem;
+    margin-bottom: 7rem;
+  }
+  .card {
+    padding: 18px;
+  }
+  .card__name {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .heading {
+    font-size: 2.5rem;
+    text-align: right;
+    padding-right: 2rem;
+  }
+  .section {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 340px));
+    gap: 40px 30px;
+  }
+}
